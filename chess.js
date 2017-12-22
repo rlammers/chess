@@ -2,7 +2,7 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle = "#808080";
 drawTiles();
-drawPiece("a1", "R");
+drawPiece("b1", "R");
 
 function drawTiles() {
 	for (i=80; i<640; i+=160) {
@@ -25,7 +25,11 @@ function drawPiece(an, type) {
 	pieces["B"] = '\u2657';
 	pieces["N"] = '\u2658';
 	pieces["P"] = '\u2659';
-	
+
+	column = "abcdefgh";
+	column_index = column.indexOf(an[0]);
+	console.log(column_index);
+
 	ctx.font = "80px Arial";
 	ctx.fillStyle = "black";
 	ctx.textAlign = "center";
