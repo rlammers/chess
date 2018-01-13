@@ -5,6 +5,8 @@ module.exports = {
     ],
     "env": {
         "browser": true
+    },
+    "rules": {
+        "linebreak-style": ["error", "windows"]
     }
-
 };
