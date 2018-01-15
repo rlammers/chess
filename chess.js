@@ -50,12 +50,18 @@ function drawPiece(an, type, colour) {
   } else {
     pieces = blackPieces;
   }
+
   ctx.fillText(pieces[type], columnCoord, rowCoord);
+}
+
+function highlightTile() {
+  // TODO: highlight a tile with a coloured border
 }
 
 function initPieces() {
   drawPiece('a1', 'R', 'white');
   drawPiece('b1', 'N', 'black');
+  highlightTile('a1');
 }
 
 drawTiles();
