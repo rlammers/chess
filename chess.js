@@ -15,14 +15,22 @@ function drawTiles() {
   }
 }
 
-function drawPiece(an, type) {
-  const pieces = [];
-  pieces.K = '\u2654';
-  pieces.Q = '\u2655';
-  pieces.R = '\u2656';
-  pieces.B = '\u2657';
-  pieces.N = '\u2658';
-  pieces.P = '\u2659';
+function drawPiece(an, type, colour) {
+  const whitePieces = [];
+  whitePieces.K = '\u2654';
+  whitePieces.Q = '\u2655';
+  whitePieces.R = '\u2656';
+  whitePieces.B = '\u2657';
+  whitePieces.N = '\u2658';
+  whitePieces.P = '\u2659';
+
+  const blackPieces = [];
+  blackPieces.K = '\u265A';
+  blackPieces.Q = '\u265B';
+  blackPieces.R = '\u265C';
+  blackPieces.B = '\u265D';
+  blackPieces.N = '\u265E';
+  blackPieces.P = '\u265F';
 
   const column = 'abcdefgh';
   const columnIndex = column.indexOf(an[0]);
@@ -33,12 +41,21 @@ function drawPiece(an, type) {
   ctx.font = '80px Arial';
   ctx.fillStyle = 'black';
   ctx.textAlign = 'center';
-  ctx.fillText(pieces[type], (columnIndex * 80) + 40, (rowIndex * 80) + 70);
+  const columnCoord = (columnIndex * 80) + 40;
+  const rowCoord = (rowIndex * 80) + 70;
+
+  let pieces = [];
+  if (colour === 'white') {
+    pieces = whitePieces;
+  } else {
+    pieces = blackPieces;
+  }
+  ctx.fillText(pieces[type], columnCoord, rowCoord);
 }
 
 function initPieces() {
-  drawPiece('a1', 'R');
-  drawPiece('b1', 'N');
+  drawPiece('a1', 'R', 'white');
+  drawPiece('b1', 'N', 'black');
 }
 
 drawTiles();
