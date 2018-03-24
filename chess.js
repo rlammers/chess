@@ -2,7 +2,7 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle = "#808080";
 drawTiles();
-drawPiece("h8", "R");
+initPieces();
 
 function drawTiles() {
 	for (i=80; i<640; i+=160) {
@@ -36,4 +36,9 @@ function drawPiece(an, type) {
 	ctx.fillStyle = "black";
 	ctx.textAlign = "center";
 	ctx.fillText(pieces[type],column_index*80+40,row_index*80+70);
+}
+
+function initPieces() {
+	drawPiece("a1","R");
+	drawPiece("b1","N");
 }
