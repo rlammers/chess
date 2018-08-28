@@ -1,0 +1,33 @@
+{
+  "name": "chess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chess.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlammers/chess.git"
+  },
+  "keywords": [
+    "chess",
+    "game",
+    "js",
+    "canvas"
+  ],
+  "author": "Roger Lammers",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rlammers/chess/issues"
+  },
+  "homepage": "https://github.com/rlammers/chess#readme",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
