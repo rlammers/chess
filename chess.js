@@ -41,4 +41,13 @@ function drawPiece(an, type) {
 function initPieces() {
 	drawPiece("a1","R");
 	drawPiece("b1","N");
+	drawPiece("h1","R");
+	drawPiece("a2","P");
+	drawPiece("b2","P");
+	drawPiece("c2","P");
+	drawPiece("d2","P");
+	drawPiece("e2","P");
+	drawPiece("f2","P");
+	drawPiece("g2","P");
+	drawPiece("h2","P");
 }
